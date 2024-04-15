@@ -209,7 +209,7 @@ describe('integration', () => {
 
         expect(core.exportVariable).toBeCalledTimes(1);
 
-        expect(core.exportVariable).toBeCalledWith('SECRET__FOO', 'SUPERSECRET');
+        expect(core.exportVariable).toBeCalledWith('SECRET__FOO', '{"SUPERKEY":"SUPERSECRET"}');
     });
 
     it('get wildcard secrets', async () => {
